@@ -802,7 +802,7 @@
       }
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 1.6rem;
       }
       .project-card {
@@ -831,22 +831,10 @@
         justify-content: center;
       }
       .project-thumb-inner {
-        position: absolute;
-        inset: 0;
-        transition: transform 0.55s ease;
-      }
-      .project-card:hover .project-thumb-inner {
-        transform: scale(1.07);
-      }
-      .project-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(61, 58, 68, 0.55);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.32s ease;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
       .project-card:hover .project-overlay {
         opacity: 1;
@@ -1298,16 +1286,16 @@
         <div class="dot-grid"></div>
       </div>
       <div class="hero-content">
-        <div class="hero-tag">No disponible :(</div>
+        <div class="hero-tag">Temporalmente no disponible</div>
         <h1 class="hero-title" id="heroTitle"></h1>
         <p class="hero-subtitle" id="heroSub">
           <span class="tw-cursor"></span>
         </p>
         <p class="hero-bio">
           Apasionada por crear interfaces que no solo se ven bien, sino que
-          <strong>se sienten bien</strong>. Con más de 4 años convirtiendo ideas
-          en experiencias memorables, donde el detalle y la empatía son siempre
-          el punto de partida.
+          <strong>se sienten bien</strong>. Mejoro mis habilidades
+          constantemente para crear interfaces desde una mirada innovadora y sin
+          límites.
         </p>
         <div class="hero-ctas">
           <a href="#trabajo" class="btn btn-primary" data-magnetic>
@@ -1337,16 +1325,12 @@
         <span class="stat-num" data-count="4" data-suffix="+">0</span>
         <span class="stat-label">Años de experiencia</span>
       </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <span class="stat-num" data-count="30" data-suffix="+">0</span>
-        <span class="stat-label">Proyectos entregados</span>
-      </div>
       <div class="stat-item reveal reveal-delay-2">
         <span class="stat-num" data-count="100" data-suffix="%">0</span>
         <span class="stat-label">Clientes satisfechos</span>
       </div>
       <div class="stat-item reveal reveal-delay-3">
-        <span class="stat-num" data-count="5" data-suffix=" stacks">0</span>
+        <span class="stat-num" data-count="5" data-suffix=" skills">0</span>
         <span class="stat-label">Tecnologías dominadas</span>
       </div>
     </div>
@@ -1355,11 +1339,11 @@
     <section id="proceso">
       <div class="reveal" style="max-width: 700px">
         <div class="section-label">Mi proceso</div>
-        <h2 class="section-title">Así es cómo <em>trabajo</em><br />contigo</h2>
+        <h2 class="section-title">Así es como <em>trabajo</em><br />contigo</h2>
         <p class="section-desc">
           Cada proyecto es único, pero siempre sigo un proceso claro y
-          colaborativo para asegurar resultados que realmente conecten con tus
-          usuarios.
+          colaborativo para asegurar resultados que realmente cumplan el
+          objetivo.
         </p>
       </div>
       <div class="steps-grid">
@@ -1375,25 +1359,21 @@
           <span class="step-num">02</span><span class="step-icon">🎨</span>
           <h3 class="step-title">Diseño UI/UX</h3>
           <p class="step-desc">
-            Wireframes, flujos y prototipos en Figma. Iteramos juntos hasta que
-            la solución se sienta exactamente como debe.
+            Prototipamos en Figma. Comenzamos el proceso creativo. Iteramos
+            juntos hasta que el entregable se siente como se debe.
           </p>
         </div>
         <div class="step-card reveal reveal-delay-3">
           <span class="step-num">03</span><span class="step-icon">💻</span>
           <h3 class="step-title">Desarrollo</h3>
           <p class="step-desc">
-            Implementación frontend de alta calidad con Angular o Next.js.
-            Código limpio, accesible y optimizado.
+            Implementación frontend de alta calidad con distintas tecnologías.
           </p>
         </div>
         <div class="step-card reveal reveal-delay-4">
           <span class="step-num">04</span><span class="step-icon">🚀</span>
           <h3 class="step-title">Entrega &amp; Soporte</h3>
-          <p class="step-desc">
-            Revisamos, ajustamos y hacemos deploy. Te acompaño en cada paso del
-            proceso de adopción.
-          </p>
+          <p class="step-desc">Revisamos, ajustamos y hacemos deploy.</p>
         </div>
       </div>
     </section>
@@ -1405,135 +1385,116 @@
           <div class="section-label">Portafolio</div>
           <h2 class="section-title">Mi <em>trabajo</em></h2>
           <p class="section-desc" style="margin-bottom: 0">
-            Una selección de proyectos que reflejan mi amor por el diseño
-            centrado en el usuario.
+            Una selección de proyectos que reflejan mi amor por el diseño de
+            aplicaciones innovadoras y algunas interactivas 😌.
           </p>
         </div>
       </div>
       <div class="projects-grid">
         <div class="project-card reveal reveal-delay-1">
           <div class="project-thumb">
-            <div class="project-thumb-inner g1"></div>
-            <div class="project-overlay">
-              <button class="project-overlay-btn">Ver proyecto →</button>
-            </div>
-            <span class="thumb-icon">📊</span>
+            <!-- <div class="project-thumb-inner g1"></div> -->
+            <img
+              src="assets/img/aprendiendo juntos.png"
+              alt="aprendiendo juntos"
+              class="project-thumb-inner g1"
+            />
           </div>
           <div class="project-body">
-            <p class="project-category">Dashboard · Analytics</p>
-            <h3 class="project-name">Dashboard de métricas</h3>
+            <p class="project-category">App · Game</p>
+            <h3 class="project-name">Aprendiendo Juntos</h3>
             <p class="project-desc">
-              Panel de control para visualización de KPIs en tiempo real con
-              gráficos interactivos y filtros avanzados.
+              Aplicación web interactiva modelo Maria Montessori pensada para
+              bebes desde los 18 meses.
             </p>
             <div class="project-tags">
-              <span class="tag">Angular</span><span class="tag">TypeScript</span
-              ><span class="tag">AWS</span><span class="tag">Figma</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal reveal-delay-2">
-          <div class="project-thumb">
-            <div class="project-thumb-inner g2"></div>
-            <div class="project-overlay">
-              <button class="project-overlay-btn">Ver proyecto →</button>
-            </div>
-            <span class="thumb-icon">🛍️</span>
-          </div>
-          <div class="project-body">
-            <p class="project-category">E-commerce · UI/UX</p>
-            <h3 class="project-name">E-commerce minimalista</h3>
-            <p class="project-desc">
-              Tienda online con experiencia de compra fluida, carrito animado y
-              checkout optimizado para conversión.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Next.js</span><span class="tag">Tailwind</span
-              ><span class="tag">Figma</span>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal reveal-delay-3">
-          <div class="project-thumb">
-            <div class="project-thumb-inner g3"></div>
-            <div class="project-overlay">
-              <button class="project-overlay-btn">Ver proyecto →</button>
-            </div>
-            <span class="thumb-icon">🏢</span>
-          </div>
-          <div class="project-body">
-            <p class="project-category">Corporativo · Landing</p>
-            <h3 class="project-name">Landing corporativa</h3>
-            <p class="project-desc">
-              Página institucional con animaciones fluidas, sistema de diseño
-              coherente y optimización SEO completa.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Next.js</span><span class="tag">GSAP</span
-              ><span class="tag">Figma</span>
+              <span class="tag">React</span><span class="tag">TailwindCSS</span
+              ><span class="tag">Tone.js</span>
             </div>
           </div>
         </div>
         <div class="project-card reveal reveal-delay-1">
           <div class="project-thumb">
-            <div class="project-thumb-inner g4"></div>
-            <div class="project-overlay">
-              <button class="project-overlay-btn">Ver proyecto →</button>
-            </div>
-            <span class="thumb-icon">⚙️</span>
+            <img
+              src="assets/img/alquimia insole.png"
+              alt="alquimia insole"
+              class="project-thumb-inner g4"
+            />
           </div>
           <div class="project-body">
-            <p class="project-category">App interna · SaaS</p>
-            <h3 class="project-name">App de gestión interna</h3>
+            <p class="project-category">E-commerce · UI/UX</p>
+            <h3 class="project-name">Alquimia Insole</h3>
             <p class="project-desc">
-              Sistema de gestión de tareas y recursos con roles, permisos y
-              notificaciones en tiempo real.
+              Tienda y blog online. Catálogos y carrito de compra.
             </p>
             <div class="project-tags">
-              <span class="tag">Angular</span><span class="tag">AWS Lambda</span
-              ><span class="tag">DynamoDB</span>
+              <span class="tag">Tiendanube</span><span class="tag">UI/UX</span
+              ><span class="tag">Figma</span>
             </div>
           </div>
         </div>
         <div class="project-card reveal reveal-delay-2">
           <div class="project-thumb">
-            <div class="project-thumb-inner g5"></div>
-            <div class="project-overlay">
-              <button class="project-overlay-btn">Ver proyecto →</button>
-            </div>
-            <span class="thumb-icon">🎨</span>
+            <!-- <div class="project-thumb-inner g2"></div> -->
+            <img
+              src="assets/img/wild lion.png"
+              alt="wild lion"
+              class="project-thumb-inner g2"
+            />
           </div>
           <div class="project-body">
-            <p class="project-category">Design System · Componentes</p>
-            <h3 class="project-name">Sistema de diseño</h3>
+            <p class="project-category">E-commerce · UI/UX</p>
+            <h3 class="project-name">Wild Lion</h3>
             <p class="project-desc">
-              Librería de componentes reutilizables con tokens de diseño,
-              documentación y guías de uso.
+              Tienda online con experiencia de compra fluida, carrito de
+              compras.
             </p>
             <div class="project-tags">
-              <span class="tag">Figma</span><span class="tag">Storybook</span
-              ><span class="tag">Angular</span>
+              <span class="tag">Next.js</span><span class="tag">Tailwind</span
+              ><span class="tag">Node.js</span>
             </div>
           </div>
         </div>
         <div class="project-card reveal reveal-delay-3">
           <div class="project-thumb">
-            <div class="project-thumb-inner g6"></div>
-            <div class="project-overlay">
-              <button class="project-overlay-btn">Ver proyecto →</button>
-            </div>
-            <span class="thumb-icon">📱</span>
+            <!-- <div class="project-thumb-inner g3"></div> -->
+            <img
+              src="assets/img/cosmos.png"
+              alt="cosmos"
+              class="project-thumb-inner g3"
+            />
           </div>
           <div class="project-body">
-            <p class="project-category">Mobile · UI Design</p>
-            <h3 class="project-name">App móvil UI</h3>
+            <p class="project-category">App · Game</p>
+            <h3 class="project-name">Cosmos Guide</h3>
             <p class="project-desc">
-              Diseño de interfaz para app móvil de bienestar con
-              microinteracciones y flujos de onboarding personalizados.
+              Aplicacion web interactiva de exploración del sistema solar.
             </p>
             <div class="project-tags">
-              <span class="tag">Figma</span><span class="tag">Prototyping</span
-              ><span class="tag">UI/UX</span>
+              <span class="tag">Claude</span> <span class="tag">Astro</span
+              ><span class="tag">Canvas API</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-thumb">
+            <img
+              src="assets/img/Atlas civilizaciones.png"
+              alt="atlas civilizaciones"
+              class="project-thumb-inner g3"
+            />
+          </div>
+          <div class="project-body">
+            <p class="project-category">App · Game</p>
+            <h3 class="project-name">Atlas Civilizaciones</h3>
+            <p class="project-desc">
+              Aplicación interactiva visualización linea temporal de hechos
+              históricos del mundo antiguo.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Claude</span><span class="tag">Astro</span
+              ><span class="tag">D3.js</span>
             </div>
           </div>
         </div>
@@ -1706,9 +1667,10 @@
         // Typewriter
         const el = document.getElementById("heroSub");
         const lines = [
-          "Diseñadora Frontend & UI/UX",
-          "Angular · Next.js · AWS Serverless",
-          "Apasionada por el diseño",
+          "Diseñadora Frontend",
+          "Angular · Figma · UI/UX",
+          "Apasionada por el diseño web",
+          "Integración activa de IA en procesos creativos",
         ];
         let li = 0,
           ci = 0,
